@@ -4,11 +4,13 @@ println "start"
 
 SqlTOCSVAllFiles testAll = new SqlTOCSVAllFiles()
 testAll.cleanup()
+testAll.testSqlWOParms()
 testAll.testSqlWParms()
-
+testAll.doCompare()
 println "end"
-class SqlTOCSVAllFiles {
 
+class SqlTOCSVAllFiles {
+   public Find find = new Find()
     //get properties file with a  list of sqltocsv files
     // for each file run sqltoCSV with out parms old put in old directory
     // for each file run sqltoCSV with out parms old put in new directory
@@ -18,7 +20,16 @@ class SqlTOCSVAllFiles {
             "/Users/kuali/Documents/diff2/"
     ]
 
-    Find find = new Find()
+    def doCompare = {
+        
+        owner.find.with {
+            path1 = difDir[0]
+            path2 = difDir[1]
+            pattern = ''
+            maxChars = 30
+        }
+        owner.find.compareFiles(find.fileFinder(find.path1), find.fileFinder(find.path2))
+    }
     def cleanup = {
         difDir.each { dir ->
             def directory = new File(dir)
@@ -67,13 +78,7 @@ class SqlTOCSVAllFiles {
         }
 
 
-        find.with {
-            path1 = difDir[0]
-            path2 = difDir[1]
-            pattern = ''
-            maxChars = 30
-        }
-        find.compareFiles(find.fileFinder(find.path1), find.fileFinder(find.path2))
+
 
     }
 
@@ -88,22 +93,23 @@ class SqlTOCSVAllFiles {
                 "/Volumes/KFS/Projects_Kuali/kfs-trunk/work/utilities/sql_to_csv_parms/SqlToCsvParms.jar"
         ]
 
-        def cnt = 1
-        def find = new Find()
 
-
-        def ret = new XmlFinder().getFilesNames("/Users/kuali/Documents/sqlWithParmFiles.xml")
+        def idx = 0
+        List filenameswparms = new ArrayList()
+        def ret = new XmlFinder().getFilesNames("/Users/kuali/Documents/sqlWithParmFiles.xml", filenameswparms)
         ret.each { fname ->
-            String tName = fname.replace(".sql", ".csv")
-            def fullFileName = find.findFullPathFile("/Volumes/KFS/Projects_Kuali/sql-reports/kfs/", fname)
+            String tName = fname.toString().replace(".sql", ".csv")
+            String cmds = filenameswparms.get(idx++)
+
             def log2 = new FileOutputStream("/tmp/outputerr1.log").each { l2 ->
+                def cnt = 0
                 jarToUseSqlToCSVParms.each { jarFile ->
 
 
                     def log1
                     def dir = difDir[cnt++]
                     log1 = new FileOutputStream("$dir${tName}")
-                    def cmd = "java -jar $jarFile -p /Users/kuali/sqlToCsv.properties ${fname}  "
+                    def cmd = "java -jar $jarFile -p /Users/kuali/sqlToCsv.properties ${cmds}  "
                     println cmd
                     def process = cmd.execute()
                     process.waitForProcessOutput(log1, l2);
@@ -111,13 +117,7 @@ class SqlTOCSVAllFiles {
                 }
             }
 
-            find.with {
-                path1 = difDir[0]
-                path2 = difDir[1]
-                pattern = ''
-                maxChars = 30
-            }
-            find.compareFiles(find.fileFinder(find.path1), find.fileFinder(find.path2))
+
         }
     }
 }
