@@ -1,0 +1,208 @@
+<SQLWITHPARMSFILES>
+<FILES path="/Volumes/KFS/Projects_Kuali/sql-reports/kfs/">
+<file name="SELECT_REPORT_FYE_ENCUMBRANCE_BALANCE_BY_FISCAL_YEAR.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+</parms>
+</file>
+<file name="SELECT_REPORT_FYE_GL_BALANCE_BY_FISCAL_YEAR.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+</parms>
+<file name="SELECT_REPORT_FYE_LABOR_BALANCE_BY_FISCAL_YEAR.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMB350A1_YEAR_END_INVENTORY_REPORT.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+  <parm>
+  2015
+  </parm>
+  <parm>
+  2015
+  </parm>
+  <parm>
+  2015
+  </parm>
+  <parm>
+  2015
+  </parm>
+  
+</parms>
+
+</file>
+</file>
+<file name ="SELECT_REPORT_CMB350A3_YEAR_END_INVENTORY_REPORT_BOND.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+    <parm>
+  2015
+  </parm>
+  <parm>
+  2015
+  </parm>
+  <parm>
+  2015
+  </parm>
+  <parm>
+  2015
+  </parm>
+
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMT350A1_YEAR_END_RETIREMENTS.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+   <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMT350A2_YEAR_END_RETIREMENTS_BOND.sql">
+<parms>
+   <parm>
+  2015
+  </parm>
+   <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMT350B1_YEAR_END_ADDITIONS.sql">
+<parms>
+    <parm>
+  2015
+  </parm>
+   <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMT350B2_YEAR_END_ADDITIONS_BOND.sql">
+<parms>
+    <parm>
+  2015
+  </parm>
+   <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMT350C1_YEAR_END_CURRENT_YEAR_DEPRECIATION.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMT350C2_YEAR_END_CURRENT_YEAR_DEPRECIATION_BOND.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+
+<file name ="SELECT_REPORT_CMT350D1_YEAR_END_INTERCAMPUS_TRANSFERS.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+   <parm>
+  2015
+  </parm>
+</parms>
+
+</file>
+<file name ="SELECT_REPORT_CMT350D2_YEAR_END_INTERCAMPUS_TRANSFERS_BOND.sql">
+<parms>
+  <parm>
+  2015
+  </parm>
+   <parm>
+  2015
+  </parm>
+</parms>
+</file>
+
+<file name ="SELECT_REPORT_DISBURSEMENT_VOUCHERS_BY_DISAPPROVED_DATE.sql">
+<parms>
+  <parm>
+   01-DEC-2013
+  </parm>
+  <parm>
+   01-DEC-2014
+  </parm>
+</parms>
+</file>
+<file name ="SELECT_REPORT_DISBURSEMENT_VOUCHERS_BY_PAID_DATE.sql">
+<parms>
+   <parm>
+   01-DEC-2013
+  </parm>
+  <parm>
+   01-DEC-2014
+  </parm>
+</parms>
+</file>
+<file name ="SELECT_REPORT_INSURANCE_PURCHASES.sql">
+<parms>
+    <parm>
+   1/2/2015
+  </parm>
+  <parm>
+   12/12/2015
+  </parm>
+</parms>
+</file>
+<file name ="SELECT_REPORT_PAYMENT_REQUESTS_BY_DISAPPROVED_DATE.sql">
+<parms>
+   <parm>
+   01-DEC-2013
+  </parm>
+  <parm>
+   01-DEC-2014
+  </parm>
+   <parm>
+   01-DEC-2013
+  </parm>
+  <parm>
+   01-DEC-2014
+  </parm>
+</parms>
+</file>
+<file name ="SELECT_REPORT_PAYMENT_REQUESTS_BY_PAID_DATE.sql">
+<parms>
+    <parm>
+   01-DEC-2013
+  </parm>
+  <parm>
+   01-DEC-2014
+  </parm>
+</parms>
+</file>
+
+</FILES>
+</SQLWITHPARMSFILES>

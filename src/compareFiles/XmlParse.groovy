@@ -2,8 +2,10 @@ package compareFiles
 
 import groovy.util.slurpersupport.GPathResult
 
+
 import java.nio.file.Path
 import java.nio.file.Paths
+
 
 //---------- Main ---------------
 //
@@ -29,12 +31,13 @@ public class XmlFinder {
 		try {
 			def find  = new Find()
 			System.out.println "hello there \n"
-			Path xmlFilePath = Paths.get(f).toAbsolutePath()
+			def fff = ""
+			def xmlFile = SqlTOCSVTestAllFiles.getResourceAsStream(f)
 
-			GPathResult sqls = new XmlSlurper().parse(xmlFilePath.toFile())
+			GPathResult sqls = new XmlSlurper().parse(xmlFile)
 			List filenames = new ArrayList()
 
-			def fff = ""
+
 			def files = sqls.FILES.breadthFirst().findAll { node ->
 
                 node.name() == 'file'

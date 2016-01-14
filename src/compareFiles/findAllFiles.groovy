@@ -1,7 +1,8 @@
 package compareFiles;
 
 import static groovy.io.FileType.FILES
-
+/*
+* Class to find the files to compare*/
 //Find f = new Find()
 //f.findFullPathFile("/Volumes/KFS/Projects_Kuali/sql-reports/kfs/","SELECT_REPORT_FYE_ENCUMBRANCE_BALANCE_BY_FISCAL_YEAR.sql")
 class Find {
@@ -11,13 +12,13 @@ class Find {
     int maxChars
     def log1 = new FileOutputStream("/Users/kuali/Documents/diffResults/diff.logs")
     def log2 = new FileOutputStream("/tmp/outputerr.log")
-
+    /* find all files  in a directory a return list of files*/
     def fileFinder = { a ->
         List<String> alist = []
         def dir = new File(a)
         def test1 = delegate
         def test2 = owner
-        def test3  = this
+        def test3 = this
         dir.eachFileRecurse(FILES) { file ->
 
             alist.add(file.name)
@@ -29,7 +30,7 @@ class Find {
         def test6 = this
         return alist.sort()
     }
-
+/*search for the file in a directory*/
     String findFullPathFile(
             def directoryName,
             def fileSubStr) {
@@ -48,7 +49,7 @@ class Find {
         }
         return results
     }
-
+    /*compare 2 files using diff*/
     void compareFiles(ArrayList<String> a, ArrayList<String> b) {
         def results = null
 
