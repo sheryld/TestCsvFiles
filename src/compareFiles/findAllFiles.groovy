@@ -16,19 +16,11 @@ class Find {
     def fileFinder = { a ->
         List<String> alist = []
         def dir = new File(a)
-        def test1 = delegate
-        def test2 = owner
-        def test3 = this
         dir.eachFileRecurse(FILES) { file ->
 
             alist.add(file.name)
-
-
         }
-        def test4 = delegate
-        def test5 = owner
-        def test6 = this
-        return alist.sort()
+         return alist.sort()
     }
 /*search for the file in a directory*/
     String findFullPathFile(
