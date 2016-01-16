@@ -20,7 +20,7 @@ class Find {
 
             alist.add(file.name)
         }
-         return alist.sort()
+        return alist.sort()
     }
 /*search for the file in a directory*/
     String findFullPathFile(
@@ -53,9 +53,7 @@ class Find {
             results = b.findLastIndexOf {
                 it.contains(file1)
             }
-
             results ?: compare(this.path1 + file1, this.path2 + b.get(results))
-
         }
     }
 
@@ -75,7 +73,7 @@ class Find {
             process.waitForProcessOutput(log1, log2);
     }
 
-    def print = {}
+
 }
 
  
