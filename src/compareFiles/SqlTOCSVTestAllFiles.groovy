@@ -85,8 +85,8 @@ def cleanup = {
 }
 def testSqlWOParms = {
     def jarToUseSqlToCSV = [
-            "/Volumes/KFS/Projects_Kuali/kfs-trunk/work/utilities/sql_to_csv/SqlToCsv.jar",
-            "/Volumes/KFS/Projects_Kuali/kfs-trunk/work/utilities/sql_to_csv_parms/SqlToCsvParms.jar"
+            "/Volumes/KFS/Projects_Kuali/TestCsvFiles/resources/old/SqlToCsv.jar",
+            "/Volumes/KFS/Projects_Kuali/TestCsvFiles/resources/new/SqlToCsvParms.jar"
     ]
     def lineNo = 1
 
@@ -122,8 +122,8 @@ def testSqlWOParms = {
 
 def testSqlWParms = {
     def jarToUseSqlToCSVParms = [
-            "/Volumes/KFS/Projects_Kuali/kfs-staging/work/utilities/sql_to_csv_parms/SqlToCsvParms.jar",
-            "/Volumes/KFS/Projects_Kuali/kfs-trunk/work/utilities/sql_to_csv_parms/SqlToCsvParms.jar"
+            "/Volumes/KFS/Projects_Kuali/TestCsvFiles/resources/old/sql_to_csv_parms/SqlToCsvParms.jar",
+            "/Volumes/KFS/Projects_Kuali/TestCsvFiles/resources/new/sql_to_csv_parms/SqlToCsvParms.jar"
     ]
 
 
